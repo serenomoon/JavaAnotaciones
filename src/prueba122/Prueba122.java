@@ -12,6 +12,16 @@ public class Prueba122 {
         
     }
     
+    
+    //Funcion para mostrar Tv
+//    public static void mostrarTv(Televisor tv){
+//        System.out.println("Marca: " + tv.marca);
+//        System.out.println("Tamaño: " + tv.getTamanio());
+//        System.out.println("Canal: " + tv.canal);
+//        System.out.println("Volumen: " + tv.volumen);
+//        System.out.println("Encendido: " + tv.estaEncendido);
+ //   }
+    
 
     public static void main(String[] args) {
 
@@ -72,7 +82,7 @@ public class Prueba122 {
         int edad;
         String dato;
  
-        System.out.print("Ingrese su nombre: ");
+        System.out.print("Ingrese su edad: ");
                                                 
         // edad = input2.next(); //Aca si ingreso un "4" x ej, estaria ingresando str, xq ingresa el ASCCI
                                 //tengo q pasarlo a int en este caso
@@ -147,6 +157,38 @@ public class Prueba122 {
         int rta = sumar(x, y);
         
         System.out.println("La suma es " + rta);
+        
+        
+        
+        /////////////////////////////// USAMOS LA CLASS TELEVISOR
+        
+        //Televisor tv1 = new Televisor();
+        //Televisor tv2 = new Televisor();
+        
+        try {
+            
+        Televisor tv1 = new Televisor("Sony", -55); //Aca hay error
+        Televisor tv2 = new Televisor("Samsung", 65);
+        
+        } catch(IllegalArgumentException ex){
+            
+            System.out.println(ex.getMessage()); //Devuelve el error en consola
+            
+        }
+        
+        
+        //tv1.marca = "Sony";
+        //tv2.marca = "Samsung";
+        
+        //tv1.tamanio = -23; //Esto no tiene sentido, xq el tamaño no puede ser -23, entonces desde la clase
+                            //podemos poner que valores pueden ser asignados
+        
+        //tv1.setTamanio(55); //Llamamos la funcion q solo pueda poner datos validos        
+        
+        
+//        mostrarTv(tv1);
+//        System.out.println("----------------------");
+//        mostrarTv(tv2);
         
     }
 
