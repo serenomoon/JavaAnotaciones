@@ -26,5 +26,15 @@ public class Prueva122_2 {
         
         tv1.mostrarInfo();
         
+        
+        //Creo un control remoto independiente de la tv
+        ControlRemoto control = new ControlRemoto();
+        
+        //Asocio el control con la tv y uso sus metodos
+        control.setTv(tv2);
+        
+        control.encender();
+        control.subirCanal();
+        
     }
 }
